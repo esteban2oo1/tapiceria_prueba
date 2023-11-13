@@ -76,14 +76,16 @@ TEMPLATES = [
 WSGI_APPLICATION = 'tapiceria.wsgi.application'
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'db2l4ligk6eo4',
-        'USER': 'aeazmyicypiluj',
-        'PASSWORD': 'ff36984dfddd5aab0a3ecb22ed6559141fd4d4f366b86fcf2eaf11903975598b',
-        'HOST': 'ec2-34-202-53-101.compute-1.amazonaws.com',
-        'PORT': '5432',
-    }
+  'default': {
+    'ENGINE': 'django.db.backends.mysql',
+    'HOST': 'mjl1a0.stackhero-network.com',
+    'OPTIONS': {
+      'ssl_mode': 'REQUIRED',
+    },
+    'NAME': 'root',
+    'USER': 'root',
+    'PASSWORD': 'pY4Cpz3NCZvTsalpdafl5RzB3u7RhYMT'
+  }
 }
 
 AUTH_PASSWORD_VALIDATORS = [
