@@ -1,0 +1,1 @@
+web: gunicorn tapiceria.wsgi --log-file -
