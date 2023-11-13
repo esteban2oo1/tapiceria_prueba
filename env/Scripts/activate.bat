@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=C:\Users\USER\Desktop\grupo_diplomado\D TAPICERIA - BACKEND\D TAPICERIA\BACKEND\env
+set VIRTUAL_ENV=C:\Users\USER\Desktop\grupo_diplomado\tapiceria_prueba\env
 
 if not defined PROMPT set PROMPT=$P$G
 

@@ -77,12 +77,12 @@ WSGI_APPLICATION = 'tapiceria.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'tapiceria_m',
-        'USER':'root',
-        'PASSWORD':'admin',
-        'HOST':'localhost',
-        'PORT':'3306'
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'db2l4ligk6eo4',
+        'USER': 'aeazmyicypiluj',
+        'PASSWORD': 'ff36984dfddd5aab0a3ecb22ed6559141fd4d4f366b86fcf2eaf11903975598b',
+        'HOST': 'ec2-34-202-53-101.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
