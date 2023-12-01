@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'creditos',
     'abonos',
     'corsheaders',
+    'roles',
+    'users_roles',
 ]
 
 MIDDLEWARE = [
