@@ -31,7 +31,7 @@ from existenciasProductos.api.router import router_existenciasProductos
 from pagos.api.router import router_pagos
 from creditos.api.router import router_creditos
 from abonos.api.router import router_abonos
-
+from .views import load_image
 
 schema_view = get_schema_view(
    openapi.Info(
@@ -76,6 +76,7 @@ urlpatterns = [
    path('api', include(router_pagos.urls)),
    path('api', include(router_creditos.urls)),
    path('api', include(router_abonos.urls)),
+   path('imagenes/producto/<str:image_name>/', load_image, name='load_image'),
 
 ] + static(settings.STATIC_URL, documet_root=settings.STATIC_ROOT)
 
