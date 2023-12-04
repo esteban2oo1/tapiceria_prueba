@@ -1,7 +1,6 @@
 from pathlib import Path
 import os
 
-
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-(itk3+@zqkh5%8_g=jr#lsk*v8mbas#0_i5u7@bx54dvqg$gw+'
@@ -18,7 +17,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'rest_framework_simplejwt',
     'drf_yasg',
+    'corsheaders',
     'users',
     'colores',
     'tiposTelas',
@@ -42,13 +43,9 @@ INSTALLED_APPS = [
     'pagos',
     'creditos',
     'abonos',
-    'corsheaders',
-    'roles',
-    'users_roles',
 ]
 
 MIDDLEWARE = [
-    
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -57,10 +54,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
-    
-    
-        
+    'corsheaders.middleware.CorsMiddleware', 
 ]
 
 ROOT_URLCONF = 'tapiceria.urls'
@@ -83,6 +77,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'tapiceria.wsgi.application'
 
+
 DATABASES = {
   'default': {
     'ENGINE': 'django.db.backends.mysql',
@@ -95,6 +90,19 @@ DATABASES = {
     'PASSWORD': 'pY4Cpz3NCZvTsalpdafl5RzB3u7RhYMT'
   }
 }
+
+"""
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'tapiceria_m',
+        'USER': 'root',
+        'PASSWORD': 'root',
+        'HOST': 'localhost',
+        'PORT': '3306'
+    }
+}
+"""
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -141,6 +149,9 @@ STATICFILES_DIRS = (
 
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 CORS_ALLOW_ALL_ORIGINS = True
                                   
-                                
+SIMPLE_JWT = {
+    'AUTH_HEADER_TYPES': ('Bearer',),
+}                       
