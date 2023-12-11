@@ -12,6 +12,7 @@ class DetallesTapizados(models.Model):
     cantidad_telaColor = models.IntegerField(default=0)
     cantidad_tipoMaterial = models.IntegerField(default=0)
     cantidad_tipoEspumilla = models.IntegerField(default=0)
+    cantidad_producto = models.IntegerField(default=0)
 
     def __str__(self):
-        return f"{self.tipoTela.nombre} - {self.color.nombre} - {self.producto.descripcion} - {self.tipoEspumilla.nombre} - {self.cantidad_telaColor} - {self.cantidad_tipoMaterial} - {self.cantidad_tipoEspumilla}"
+        return f"{self.tipoTela.nombre} - {self.color.nombre} - {self.producto.descripcion} - {self.tipoEspumilla.nombre} - {self.cantidad_telaColor} - {self.cantidad_tipoMaterial} - {self.cantidad_tipoEspumilla} - {self.cantidad_producto}"
