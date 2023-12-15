@@ -96,13 +96,14 @@ DATABASES = {
   }
 }
 
+
 """
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'tapiceria_m',
+        'NAME': 'bac',
         'USER': 'root',
-        'PASSWORD': 'root',
+        'PASSWORD': 'admin',
         'HOST': 'localhost',
         'PORT': '3306'
     }
